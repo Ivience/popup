@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>PopUp</title>
+      <link rel="stylesheet" href="normalize.css" />
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <button data-toggle="modal" class="button popup-button">PopUp</button>
+      <div class="modal">
+         <div class="modal__overlay" data-keyboard="true"></div>
+         <!-- /.modal__overlay -->
+         <div class="modal__dialog" data-keyboard="true">
+            <a href="#" class="close modal__close">
+            </a>
+            <div class="modal__heading">
+               <h1 class="modal__title">Получить статус</h1>
+               <div class="modal__status">
+                  <span>Магазин</span>
+               </div>
+            </div>
+            <form class="form modal__form">
+               <ul class="form__lines">
+                  <li class="form__line">
+                     <span class="form__title">Название компании</span>
+                     <input 
+                        type="text"
+                        class="form__input modal__input" 
+                        placeholder="ООО “ВитаМед”"
+                        name="name"
+                        required
+                        minlength="2">
+                  </li>
+                  <li class="form__line">
+                     <span class="form__title">Адрес</span>
+                     <input 
+                        class="form__input" 
+                        type="text"
+                        placeholder="ул. Смоленская 19а"
+                        name="adress"
+                        required
+                        minlength="2">
+                  </li>
+                  <li class="form__line">
+                     <span class="form__title">КПП/ИНН</span>
+                     <div>
+                        <input 
+                           class="form__input form__input_small" type="text"
+                           placeholder="644901001"
+                           name="kpp"
+                           required
+                           minlength="9">
+                        <input 
+                           class="form__input form__input_small" type="text"
+                           placeholder="6449013711"
+                           name="inn"
+                           required
+                           minlength="10">
+                     </div>
+                  </li>
+                  <li class="form__line">
+                     <span class="form__title">Телефон</span>
+                     <input 
+                        type="tel"
+                        class="form__input modal__input" 
+                        placeholder="+7 657 453 65 11"
+                        name="phone"
+                        required
+                        minlength="16">
+                  </li>
+                  <li class="form__line">
+                     <span class="form__title">Эл. адрес</span>
+                     <input 
+                        type="email"
+                        class="form__input modal__input" 
+                        placeholder="shulga.ivan@gmail.com"
+                        name="email"
+                        required>
+                  </li>
+               </ul>
+            </form>
+            <button class="button modal__button">Отправить заявку</button>
+         </div>
+         <!-- /.modal__dialog -->
+         <a href="#" class="close modal__back">Назад</a>
+      </div>
+      <!-- /.modal -->
+      <script src="js/jquery-3.6.0.min.js"></script>
+      <script src="js/jquery.validate.min.js"></script>
+      <script src="js/jquery.mask.min.js"></script>
+      <script src="js/main.js"></script>
+   </body>
+</html>
